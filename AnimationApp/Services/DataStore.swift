@@ -9,11 +9,19 @@ import Foundation
 import SpringAnimation
 
 final class DataStore {
+
     static let shared = DataStore()
     
     let animationPreset = AnimationPreset.allCases
-    
     let animationCurve = AnimationCurve.allCases
     
+    func getRandomPreset() -> String {
+        animationPreset.randomElement()?.rawValue ?? ""
+    }
+    
+    func getRandomCurve() -> String {
+        animationCurve.randomElement()?.rawValue ?? ""
+    }
+
     private init() {}
 }

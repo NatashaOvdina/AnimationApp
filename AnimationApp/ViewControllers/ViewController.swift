@@ -20,8 +20,6 @@ final class ViewController: UIViewController {
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var delayLabel: UILabel!
     
-    private var randomAnimation = getRandomAnimation()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         button.setTitle("Run", for: .normal)
@@ -35,6 +33,13 @@ final class ViewController: UIViewController {
         durationLabel.text = "0.82"
         delayLabel.text = "0.30"
     }
+    private func setupLabels() {
+        presetLabel.text = Animation.getRandomAnimation().preset
+        curveLabel.text = Animation.getRandomAnimation().curve
+        forceLabel.text = String(format: "%.2f", Animation.getRandomAnimation().force)
+        durationLabel.text = String(format: "%.2f", Animation.getRandomAnimation().duration)
+        delayLabel.text = String(format: "%.2f", Animation.getRandomAnimation().delay)
+    }
     
     private func setupAnimationView() {
         animationView.animation = presetLabel.text ?? ""
@@ -44,13 +49,6 @@ final class ViewController: UIViewController {
         animationView.delay = Double(delayLabel.text ?? "") ?? 0.0
     }
     
-    private func setupLabels() {
-        presetLabel.text = "Preset: \(randomAnimation.preset.description)"
-        curveLabel.text = "Curve: \(randomAnimation.curve)"
-        forceLabel.text = "Force: \(String(format: "%.2f", randomAnimation.force))"
-        durationLabel.text = "Duration: \(String(format: "%.2f", randomAnimation.duration))"
-        delayLabel.text = "Delay: \(String(format: "%.2f", randomAnimation.delay))"
-    }
     
     
     @IBAction func buttonDidTapped(_ sender: UIButton) {
@@ -58,11 +56,7 @@ final class ViewController: UIViewController {
         animationView.animate()
         setupLabels()
         sender.setTitle("Run \(presetLabel.text ?? "")", for: .normal)
-     
-        
-       
-    
         
     }
-    
 }
+
