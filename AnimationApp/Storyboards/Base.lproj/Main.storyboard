@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-AD-xAZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-AD-xAZ" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="46.666666666666657" y="104" width="300" height="166"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="phh-rJ-UGM">
@@ -82,6 +82,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yG5-QY-dan"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's check animations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l6-Zd-qTJ">
                                 <rect key="frame" x="84.666666666666671" y="551" width="223.66666666666663" height="26.333333333333371"/>
@@ -102,6 +105,15 @@
                             <constraint firstItem="Sh8-AD-xAZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="yL7-P4-3Fn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="Sh8-AD-xAZ" id="Wzw-7G-LdB"/>
+                        <outlet property="button" destination="ht8-YQ-7SW" id="rHY-wJ-Vql"/>
+                        <outlet property="curveLabel" destination="XSf-kF-bO2" id="HsM-yq-yZP"/>
+                        <outlet property="delayLabel" destination="3fb-zU-2zN" id="ssp-6h-lDu"/>
+                        <outlet property="durationLabel" destination="Aor-oQ-Byh" id="JLG-e3-2dh"/>
+                        <outlet property="forceLabel" destination="8FD-0M-jig" id="f7Z-K2-4bJ"/>
+                        <outlet property="presetLabel" destination="cV2-Bg-Vn7" id="rOL-bp-0pa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
