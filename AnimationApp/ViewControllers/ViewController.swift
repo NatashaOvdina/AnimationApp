@@ -25,27 +25,16 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         button.setTitle("Run", for: .normal)
-        setInitialSettings()
+        setupLabels()
     }
     
     @IBAction func buttonDidTapped(_ sender: UIButton) {
-        setInitialSettings()
-        animationView.animate()
-        
         setupLabels()
         setupAnimationView()
         animationView.animate()
         
         randomAnimation = Animation.getRandomAnimation()
         sender.setTitle("Run \(randomAnimation.preset)", for: .normal)
-    }
-    
-    private func setInitialSettings() {
-        presetLabel.text = randomAnimation.preset
-        curveLabel.text = randomAnimation.curve
-        forceLabel.text =  String(format: "%.2f", randomAnimation.force)
-        durationLabel.text = String(format: "%.2f", randomAnimation.duration)
-        delayLabel.text = String(format: "%.2f", randomAnimation.delay)
     }
     
     private func setupLabels() {
