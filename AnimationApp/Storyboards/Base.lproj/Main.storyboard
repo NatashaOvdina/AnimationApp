@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_72" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-AD-xAZ" customClass="SpringView" customModule="SpringAnimation">
-                                <rect key="frame" x="46.666666666666657" y="104" width="300" height="166"/>
+                                <rect key="frame" x="65" y="104" width="300" height="166"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZUx-Ax-cqM">
                                         <rect key="frame" x="17" y="16" width="266" height="134"/>
@@ -117,7 +117,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht8-YQ-7SW">
-                                <rect key="frame" x="46.666666666666657" y="621.33333333333337" width="300" height="33"/>
+                                <rect key="frame" x="65" y="685.33333333333337" width="300" height="33"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's check animations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l6-Zd-qTJ">
-                                <rect key="frame" x="84.666666666666671" y="551" width="223.66666666666663" height="26.333333333333371"/>
+                                <rect key="frame" x="103.33333333333333" y="621.33333333333337" width="223.66666666666669" height="26.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -143,9 +143,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.86078912019729614" green="0.61205507228253586" blue="0.71778967703329055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="ht8-YQ-7SW" firstAttribute="top" secondItem="9l6-Zd-qTJ" secondAttribute="bottom" constant="37.670000000000002" id="AoN-pK-j2O"/>
                             <constraint firstItem="ht8-YQ-7SW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E6S-zX-NAc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ht8-YQ-7SW" secondAttribute="bottom" multiplier="5:4" id="WNw-dL-OUR"/>
-                            <constraint firstItem="ht8-YQ-7SW" firstAttribute="top" secondItem="9l6-Zd-qTJ" secondAttribute="bottom" constant="44" id="YcN-hs-gfC"/>
                             <constraint firstItem="Sh8-AD-xAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z0t-rN-2lW"/>
                             <constraint firstItem="ht8-YQ-7SW" firstAttribute="width" secondItem="Sh8-AD-xAZ" secondAttribute="width" id="wGM-Xz-AN2"/>
                             <constraint firstItem="9l6-Zd-qTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y7l-W9-V4G"/>

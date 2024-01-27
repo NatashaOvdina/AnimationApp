@@ -38,7 +38,6 @@ final class ViewController: UIViewController {
         
         randomAnimation = Animation.getRandomAnimation()
         sender.setTitle("Run \(randomAnimation.preset)", for: .normal)
-        
     }
     
     private func setInitialSettings() {
@@ -48,6 +47,7 @@ final class ViewController: UIViewController {
         durationLabel.text = String(format: "%.2f", randomAnimation.duration)
         delayLabel.text = String(format: "%.2f", randomAnimation.delay)
     }
+    
     private func setupLabels() {
         presetLabel.text = randomAnimation.preset
         curveLabel.text = randomAnimation.curve
@@ -63,8 +63,5 @@ final class ViewController: UIViewController {
         animationView.duration = Double(randomAnimation.duration)
         animationView.delay = Double(randomAnimation.delay)
     }
-    
-    
-    
 }
 
