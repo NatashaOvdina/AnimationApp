@@ -12,6 +12,7 @@ final class DataStore {
     
     static let shared = DataStore()
     
+    // либо можно было let animations: [AnimationPreset] = [.fadeIn,...]
     let animationPreset = AnimationPreset.allCases
     let animationCurve = AnimationCurve.allCases
     
